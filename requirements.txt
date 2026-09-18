@@ -1,0 +1,10 @@
+# 本项目运行时只依赖 Python 标准库：
+#   os / re / json / time / threading / csv / datetime / urllib / collections / importlib / traceback
+# 因此 pip 层面没有必须安装的第三方包（本文件保留为空清单，方便你后续追加）。
+#
+# 两件事不属于 requirements.txt，需要你自己准备：
+#   1. pythongo SDK —— 交易平台的 Python 策略端 SDK，由平台方提供，
+#      不属于本项目、也不随包分发，请在平台的 Python 环境中安装。
+#   2. 各家 AI 的 API Key —— 放进你自己的 API 目录（见 README 第 2 节），
+#      或用环境变量 DEEPSEEK_API_KEY / ARK_API_KEY / ZHIPU_API_KEY / KIMI_API_KEY。
+#      联网调用只用标准库 urllib，不需要 requests。

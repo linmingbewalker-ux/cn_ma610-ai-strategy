@@ -1,0 +1,238 @@
+========================================================================
+冲突审计报告：AI_multiagent_debate_v2_翻修.py
+总行数 2227
+========================================================================
+
+【1】同名定义重复（后定义的会把前面的整个覆盖掉）
+  无
+
+  类内方法重名（同一个类里的方法被覆盖）:
+  无
+
+【2】同一个 self.X 被多处赋值（状态有多个主人）
+  pending_order_id         被写 9 次 / 分散在 8 个函数：
+       行674   AI_multiagent_debate_v2.__init__
+       行922   AI_multiagent_debate_v2.on_order
+       行934   AI_multiagent_debate_v2.on_order_cancel
+       行1026  AI_multiagent_debate_v2.on_trade
+       行1047  AI_multiagent_debate_v2.on_trade
+       行1443  AI_multiagent_debate_v2._cancel_pending_before_market_close
+       行1565  AI_multiagent_debate_v2._drive
+       行1738  AI_multiagent_debate_v2._execute
+       ...还有 1 处
+  pending_order_ts         被写 9 次 / 分散在 8 个函数：
+       行675   AI_multiagent_debate_v2.__init__
+       行923   AI_multiagent_debate_v2.on_order
+       行935   AI_multiagent_debate_v2.on_order_cancel
+       行1028  AI_multiagent_debate_v2.on_trade
+       行1049  AI_multiagent_debate_v2.on_trade
+       行1444  AI_multiagent_debate_v2._cancel_pending_before_market_close
+       行1566  AI_multiagent_debate_v2._drive
+       行1739  AI_multiagent_debate_v2._execute
+       ...还有 1 处
+  _pending_kind            被写 9 次 / 分散在 8 个函数：
+       行679   AI_multiagent_debate_v2.__init__
+       行924   AI_multiagent_debate_v2.on_order
+       行936   AI_multiagent_debate_v2.on_order_cancel
+       行1027  AI_multiagent_debate_v2.on_trade
+       行1048  AI_multiagent_debate_v2.on_trade
+       行1445  AI_multiagent_debate_v2._cancel_pending_before_market_close
+       行1567  AI_multiagent_debate_v2._drive
+       行1740  AI_multiagent_debate_v2._execute
+       ...还有 1 处
+  _open_note               被写 6 次 / 分散在 2 个函数：
+       行680   AI_multiagent_debate_v2.__init__
+       行1713  AI_multiagent_debate_v2._execute
+       行1719  AI_multiagent_debate_v2._execute
+       行1727  AI_multiagent_debate_v2._execute
+       行1743  AI_multiagent_debate_v2._execute
+       行1747  AI_multiagent_debate_v2._execute
+  _hard_stop_fired         被写 5 次 / 分散在 3 个函数：
+       行682   AI_multiagent_debate_v2.__init__
+       行702   AI_multiagent_debate_v2.__init__
+       行1055  AI_multiagent_debate_v2.on_trade
+       行1530  AI_multiagent_debate_v2._drive
+       行1598  AI_multiagent_debate_v2._drive
+  _halted                  被写 4 次 / 分散在 2 个函数：
+       行663   AI_multiagent_debate_v2.__init__
+       行667   AI_multiagent_debate_v2.__init__
+       行1508  AI_multiagent_debate_v2._drive
+       行1633  AI_multiagent_debate_v2._drive
+  position                 被写 4 次 / 分散在 3 个函数：
+       行671   AI_multiagent_debate_v2.__init__
+       行1025  AI_multiagent_debate_v2.on_trade
+       行1045  AI_multiagent_debate_v2.on_trade
+       行1594  AI_multiagent_debate_v2._drive
+  entry_ts                 被写 4 次 / 分散在 3 个函数：
+       行673   AI_multiagent_debate_v2.__init__
+       行1023  AI_multiagent_debate_v2.on_trade
+       行1053  AI_multiagent_debate_v2.on_trade
+       行1597  AI_multiagent_debate_v2._drive
+  _tp_fired                被写 4 次 / 分散在 3 个函数：
+       行683   AI_multiagent_debate_v2.__init__
+       行1056  AI_multiagent_debate_v2.on_trade
+       行1549  AI_multiagent_debate_v2._drive
+       行1599  AI_multiagent_debate_v2._drive
+  _pos_synced_by_reconcile 被写 4 次 / 分散在 3 个函数：
+       行684   AI_multiagent_debate_v2.__init__
+       行1020  AI_multiagent_debate_v2.on_trade
+       行1042  AI_multiagent_debate_v2.on_trade
+       行1595  AI_multiagent_debate_v2._drive
+  _last_round_result       被写 4 次 / 分散在 2 个函数：
+       行726   AI_multiagent_debate_v2.__init__
+       行1535  AI_multiagent_debate_v2._drive
+       行1554  AI_multiagent_debate_v2._drive
+       行1692  AI_multiagent_debate_v2._drive
+  s                        被写 4 次 / 分散在 4 个函数：
+       行2003  ApiManager.__init__
+       行2031  LockSystem.__init__
+       行2058  AccountHealth.__init__
+       行2098  RestartSystem.__init__
+  last_reason              被写 4 次 / 分散在 2 个函数：
+       行2032  LockSystem.__init__
+       行2038  LockSystem.can_open
+       行2041  LockSystem.can_open
+       行2044  LockSystem.can_open
+  _fund_blocked            被写 3 次 / 分散在 3 个函数：
+       行654   AI_multiagent_debate_v2.__init__
+       行861   AI_multiagent_debate_v2._heartbeat
+       行902   AI_multiagent_debate_v2.on_error
+  _fund_blocked_ts         被写 3 次 / 分散在 3 个函数：
+       行655   AI_multiagent_debate_v2.__init__
+       行862   AI_multiagent_debate_v2._heartbeat
+       行903   AI_multiagent_debate_v2.on_error
+  light                    被写 3 次 / 分散在 2 个函数：
+       行688   AI_multiagent_debate_v2.__init__
+       行1133  AI_multiagent_debate_v2._update_light
+       行1135  AI_multiagent_debate_v2._update_light
+  _post_entry_closes       被写 3 次 / 分散在 2 个函数：
+       行703   AI_multiagent_debate_v2.__init__
+       行1024  AI_multiagent_debate_v2.on_trade
+       行1054  AI_multiagent_debate_v2.on_trade
+  day_high                 被写 3 次 / 分散在 2 个函数：
+       行712   AI_multiagent_debate_v2.__init__
+       行967   AI_multiagent_debate_v2.on_tick
+       行970   AI_multiagent_debate_v2.on_tick
+  day_low                  被写 3 次 / 分散在 2 个函数：
+       行713   AI_multiagent_debate_v2.__init__
+       行969   AI_multiagent_debate_v2.on_tick
+       行971   AI_multiagent_debate_v2.on_tick
+  temperature              被写 2 次 / 分散在 2 个函数：
+       行176   ChatClient.__init__
+       行323   MultiAgentDebate.__init__
+  last_usage               被写 2 次 / 分散在 2 个函数：
+       行177   ChatClient.__init__
+       行211   ChatClient.chat
+  round_no                 被写 2 次 / 分散在 2 个函数：
+       行324   MultiAgentDebate.__init__
+       行463   MultiAgentDebate.decide_verbose
+  last_result              被写 2 次 / 分散在 2 个函数：
+       行325   MultiAgentDebate.__init__
+       行559   MultiAgentDebate.decide_verbose
+  _heartbeat_ts            被写 2 次 / 分散在 2 个函数：
+       行652   AI_multiagent_debate_v2.__init__
+       行857   AI_multiagent_debate_v2._heartbeat
+  _last_tick_ts            被写 2 次 / 分散在 2 个函数：
+       行653   AI_multiagent_debate_v2.__init__
+       行952   AI_multiagent_debate_v2.on_tick
+  entry_price              被写 2 次 / 分散在 2 个函数：
+       行672   AI_multiagent_debate_v2.__init__
+       行1022  AI_multiagent_debate_v2.on_trade
+  _event_note              被写 2 次 / 分散在 2 个函数：
+       行681   AI_multiagent_debate_v2.__init__
+       行1806  AI_multiagent_debate_v2._notify
+  light_payload            被写 2 次 / 分散在 2 个函数：
+       行693   AI_multiagent_debate_v2.__init__
+       行1104  AI_multiagent_debate_v2._update_light
+  _light_pnl               被写 2 次 / 分散在 2 个函数：
+       行694   AI_multiagent_debate_v2.__init__
+       行1111  AI_multiagent_debate_v2._update_light
+  _cooling_done            被写 2 次 / 分散在 2 个函数：
+       行701   AI_multiagent_debate_v2.__init__
+       行1453  AI_multiagent_debate_v2._run_warmup_questions
+  kline_generator          被写 2 次 / 分散在 2 个函数：
+       行705   AI_multiagent_debate_v2.__init__
+       行784   AI_multiagent_debate_v2.on_start
+  _prev_volume             被写 2 次 / 分散在 2 个函数：
+       行711   AI_multiagent_debate_v2.__init__
+       行975   AI_multiagent_debate_v2.on_tick
+  _api_calls               被写 2 次 / 分散在 2 个函数：
+       行720   AI_multiagent_debate_v2.__init__
+       行1653  AI_multiagent_debate_v2._drive
+  _est_cost                被写 2 次 / 分散在 2 个函数：
+       行721   AI_multiagent_debate_v2.__init__
+       行1654  AI_multiagent_debate_v2._drive
+  _last_decision_time      被写 2 次 / 分散在 2 个函数：
+       行723   AI_multiagent_debate_v2.__init__
+       行1657  AI_multiagent_debate_v2._drive
+  _cached_sig              被写 2 次 / 分散在 2 个函数：
+       行724   AI_multiagent_debate_v2.__init__
+       行1656  AI_multiagent_debate_v2._drive
+  _first_ts                被写 2 次 / 分散在 2 个函数：
+       行732   AI_multiagent_debate_v2.__init__
+       行960   AI_multiagent_debate_v2.on_tick
+  _status_ts               被写 2 次 / 分散在 2 个函数：
+       行733   AI_multiagent_debate_v2.__init__
+       行816   AI_multiagent_debate_v2._status
+  _status_tag              被写 2 次 / 分散在 2 个函数：
+       行734   AI_multiagent_debate_v2.__init__
+       行817   AI_multiagent_debate_v2._status
+  director_breached        被写 2 次 / 分散在 2 个函数：
+       行742   AI_multiagent_debate_v2.__init__
+       行1507  AI_multiagent_debate_v2._drive
+  suspended_until          被写 2 次 / 分散在 2 个函数：
+       行2004  ApiManager.__init__
+       行2009  ApiManager.suspend
+  suspend_count            被写 2 次 / 分散在 2 个函数：
+       行2005  ApiManager.__init__
+       行2010  ApiManager.suspend
+
+  重点盯这几个（写错了直接亏钱）:
+     position             写入函数=['AI_multiagent_debate_v2.__init__', 'AI_multiagent_debate_v2._drive', 'AI_multiagent_debate_v2.on_trade']
+     entry_price          写入函数=['AI_multiagent_debate_v2.__init__', 'AI_multiagent_debate_v2.on_trade']
+     pending_order_id     写入函数=['AI_multiagent_debate_v2.__init__', 'AI_multiagent_debate_v2._cancel_pending_before_market_close', 'AI_multiagent_debate_v2._close', 'AI_multiagent_debate_v2._drive', 'AI_multiagent_debate_v2._execute', 'AI_multiagent_debate_v2.on_order', 'AI_multiagent_debate_v2.on_order_cancel', 'AI_multiagent_debate_v2.on_trade']
+     pending_order_ts     写入函数=['AI_multiagent_debate_v2.__init__', 'AI_multiagent_debate_v2._cancel_pending_before_market_close', 'AI_multiagent_debate_v2._close', 'AI_multiagent_debate_v2._drive', 'AI_multiagent_debate_v2._execute', 'AI_multiagent_debate_v2.on_order', 'AI_multiagent_debate_v2.on_order_cancel', 'AI_multiagent_debate_v2.on_trade']
+     _halted              写入函数=['AI_multiagent_debate_v2.__init__', 'AI_multiagent_debate_v2._drive']
+     director_breached    写入函数=['AI_multiagent_debate_v2.__init__', 'AI_multiagent_debate_v2._drive']
+     _hard_stop_fired     写入函数=['AI_multiagent_debate_v2.__init__', 'AI_multiagent_debate_v2._drive', 'AI_multiagent_debate_v2.on_trade']
+     _tp_fired            写入函数=['AI_multiagent_debate_v2.__init__', 'AI_multiagent_debate_v2._drive', 'AI_multiagent_debate_v2.on_trade']
+     light                写入函数=['AI_multiagent_debate_v2.__init__', 'AI_multiagent_debate_v2._update_light']
+
+【3】定义了但全文件没人调用的方法（死代码）
+  · AI_multiagent_debate_v2._snapshot
+  · BaseStrategy.pause_strategy
+  · BaseStrategy.sub_market_data
+  · MultiAgentDebate.decide
+  · RestartSystem.reset_runtime_state
+
+【4】return / raise / continue 之后还有同级代码（写了也不会执行）
+  无
+
+【5】模块级变量名重复赋值
+  （仅列全大写常量；普通变量重复赋值不报）
+
+【6】except 里静默通过（出问题看不出）
+  行347   except Exception:
+  行754   except Exception:
+  行864   except Exception:
+  行899   except Exception:
+  行918   except Exception:
+  行932   except Exception:
+  行943   except Exception:
+  行994   except Exception:
+  行1298  except Exception:
+  行1423  except Exception:
+  行2208  except Exception:
+  行803   except Exception:
+  行1073  except Exception:
+  行1661  except Exception:
+  行1782  except (TypeError, ValueError):
+  行1808  except Exception:
+  行1064  except Exception:
+  行1525  except Exception:
+  行1544  except Exception:
+  行1475  except Exception:
+
+========================================================================
+审计结束
+========================================================================

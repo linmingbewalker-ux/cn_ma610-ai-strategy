@@ -1,0 +1,32 @@
+# ---- Python 运行产物 ----
+__pycache__/
+*.py[cod]
+*.pyc
+*.egg-info/
+build/
+dist/
+
+# ---- 密钥 / 账号（红线：绝不能提交）----
+API/
+api_keys_local.py
+*.key
+*.pem
+secrets.*
+.env
+.env.*
+
+# ---- 运行日志与导出数据 ----
+*.log
+logs/
+out/
+*.csv
+*.xlsx
+
+# ---- 编辑器 / 系统 ----
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# ---- 平台 SDK（不属于本项目，勿提交）----
+pythongo/
